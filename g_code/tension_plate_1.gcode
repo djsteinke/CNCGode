@@ -1,0 +1,66 @@
+;
+;BEGIN PROGRAM
+G21 ;set metric
+G90 ;set absolute
+;
+; START circle1
+; move to start of shape
+G0 Z5.0
+G0 X21.0 Y21.3375
+G0 Z0.5
+; begin cutting cycle
+G1 Z0 F200
+G2 X21.0 Y40.6625 R9.6625 F400
+G2 X21.0 Y21.3375 R9.6625 F400
+G0 Z5.0
+; END circle1
+;
+;
+; START circle2
+; move to start of shape
+G0 Z5.0
+G0 X21.0 Y159.9375
+G0 Z0.5
+; begin cutting cycle
+G1 Z0 F200
+G2 X21.0 Y179.2625 R9.6625 F400
+G2 X21.0 Y159.9375 R9.6625 F400
+G0 Z5.0
+; END circle2
+;
+;
+; START circle3
+; move to start of shape
+G0 Z5.0
+G0 X12.0 Y79.6875
+G0 Z0.5
+; begin cutting cycle
+G1 Z0 F200
+G2 X12.0 Y80.9125 R0.6125 F400
+G2 X12.0 Y79.6875 R0.6125 F400
+G0 Z5.0
+; END circle3
+;
+;
+; START perimeter
+; move to start of shape
+G0 Z5.0
+G0 X10.0 Y6.5875
+G0 Z0.5
+; begin cutting cycle
+G1 Z0 F200
+G2 X3.4125 Y13.175 R6.5875 F400
+G1 Y183.775 F400
+G2 X10.0 Y190.3625 R6.5875 F400
+G1 X32.0 F400
+G2 X38.5875 Y183.775 R6.5875 F400
+G1 Y13.175 F400
+G2 X32.0 Y6.5875 R6.5875 F400
+G1 X10.0 F400
+G0 Z5.0
+; END perimeter
+;
+;
+G0 Z5.0
+G0 X0.0 Y0.0
+;END PROGRAM
